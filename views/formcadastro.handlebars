@@ -1,0 +1,26 @@
+{{#each erros}}
+  <div class="alert alert-danger">{{texto}}</div>
+  <form action="/login" method="get"></form>
+  {{else}}
+{{/each}}
+{{#each error_msg}}
+  <div class="alert alert-danger">{{error_msg}}</div>
+  <form action="/login" method="get"></form>
+  {{else}}
+{{/each}}
+
+<h1>Área de cadastro!</h1>
+<p>Caso seu e-mail já esteja cadastrado, clique abaixo para fazer LOGIN</p>
+<button onclick="window.location='/login'">IR PARA LOGIN</button>
+
+<form action="/cadastro/novo" method="post">
+  <p>Nome: </p>
+  <input type="varchar" name="nome" >
+  <p>Email: </p>
+  <input type="email" name="email" onblur="validaEmail(email)" >
+  <p>Senha:</p>
+  <input type="password" name="senha" >
+  <p>Repita sua senha:</p>
+  <input type="password" name="senha2" >
+  <button type="submit">CADASTRAR</button>
+</form>

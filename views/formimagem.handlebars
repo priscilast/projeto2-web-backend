@@ -1,0 +1,18 @@
+ {{#each errosPostagem}}
+  <div class="alert alert-danger">{{texto}}</div>
+  {{else}}
+{{/each}}
+
+<h1>Página do usuario</h1>
+<h2>Publicar imagem/video</h2>
+ <form action='file/upload' method='post' encType="multipart/form-data">
+        <input type="file" name="file" />
+        <input type='submit' value='Upload!' />
+  </form>
+
+
+
+
+
+
+

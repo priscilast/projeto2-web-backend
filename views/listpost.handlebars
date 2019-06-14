@@ -1,0 +1,36 @@
+<h1>LISTA DE POST:</h1>
+
+<script type="text/javascript">
+var texto = "Busque aqui!"
+function preenche(){
+  var valor=document.getElementById("busca").value
+  if(valor == " "){
+    document.getElementById("busca").value=texto
+  }
+}
+function limpa() {
+  var valor=document.getElementById("busca").value
+  if(valor == texto){
+    document.getElementById("busca").value=" "
+  }
+}
+</script>
+
+<style media="screen" type="text/css">
+
+</style>
+<body onload="preenche()">
+  <form class="" action="" method="get">
+    <input type="text" onclick="limpa()" onblur="preenche()" name="palavra" id="busca" value="Busque aqui!">
+    <input type="submit" value="BUSCAR">
+  </form>
+
+</body>
+
+{{#each posts}}
+  <h2>{{titulo}}</h2>
+  <p>{{conteudo}}</p>
+  {{posts}}
+  <hr>
+
+{{/each}}
